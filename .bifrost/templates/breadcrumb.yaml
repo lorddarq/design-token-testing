@@ -1,0 +1,16 @@
+name: breadcrumb
+slots:
+  - items
+structure: |
+  <div className="breadcrumb">
+    {items.map((item, index) => (
+      <span key={index} className="breadcrumb-item">
+        {item.icon && <span className="breadcrumb-icon">{item.icon}</span>}
+        {item.link && <span className="breadcrumb-link">{item.link}</span>}
+        {item.separator && <span className="breadcrumb-separator">{item.separator}</span>}
+      </span>
+    ))}
+  </div>
+props:
+  items: {
+    breadcrumb-item[]

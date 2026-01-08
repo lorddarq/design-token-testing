@@ -1,0 +1,23 @@
+name: alert
+slots:
+  - icon
+  - title
+  - description
+  - action
+  - onClose
+structure: |
+  <div className="alert-wrapper">
+    {icon && <span className="alert-icon">{icon}</span>}
+    <div className="alert-content">
+      {title && <div className="alert-title">{title}</div>}
+      {description && <div className="alert-description">{description}</div>}
+    </div>
+    {action && <div className="alert-action">{action}</div>}
+    {onClose && <div className="alert-close">{onClose}</div>}
+  </div>
+props:
+  icon: React.ReactNode
+  title: React.ReactNode
+  description: React.ReactNode
+  action: React.ReactNode
+  onClose: React.ReactNode

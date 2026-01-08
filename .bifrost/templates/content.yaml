@@ -1,0 +1,32 @@
+name: content
+slots:
+  - icon?
+  - text-content?
+  - separator?
+  - actions?
+structure: |
+  <div className="content">
+    {icon && <span className="content-icon">{icon}</span>}
+    {text-content && <span className="content-text-content">{text-content}</span>}
+    {separator && <span className="content-separator">{separator}</span>}
+    {actions && <span className="content-actions">{actions}</span>}
+  </div>
+props:
+  icon: React.ReactNode
+  text-content: React.ReactNode
+  separator: React.ReactNode
+  actions: React.ReactNode
+  layout: {
+    layout-01: {
+      icon: React.ReactNode,
+      text-content: React.ReactNode,
+      separator: React.ReactNode,
+      actions: React.ReactNode
+    },
+    layout-02: {
+      icon: React.ReactNode,
+      text-content: React.ReactNode,
+      separator: React.ReactNode,
+      actions: React.ReactNode
+    }
+  }

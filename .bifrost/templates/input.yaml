@@ -1,0 +1,26 @@
+name: Input
+slots:
+  - label
+  - prefix
+  - input
+  - suffix
+  - helperText
+  - error
+structure: |
+  {label && <label className="input-label">{label}</label>}
+  <div className="input-wrapper">
+    {prefix && <span className="input-prefix">{prefix}</span>}
+    <input className="input-field" {...inputProps} />
+    {suffix && <span className="input-suffix">{suffix}</span>}
+  </div>
+  {error ? (
+    <span className="input-error">{error}</span>
+  ) : helperText && (
+    <span className="input-helper">{helperText}</span>
+  )}
+props:
+  label: React.ReactNode
+  prefix: React.ReactNode
+  suffix: React.ReactNode
+  helperText: string
+  error: string

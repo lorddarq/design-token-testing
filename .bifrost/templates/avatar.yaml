@@ -1,0 +1,19 @@
+name: Avatar
+slots:
+  - src
+  - fallback
+  - badge
+structure: |
+  <div className="avatar-wrapper">
+    {src ? (
+      <img className="avatar-image" src={src} alt={alt} />
+    ) : (
+      <span className="avatar-fallback">{fallback}</span>
+    )}
+    {badge && <span className="avatar-badge">{badge}</span>}
+  </div>
+props:
+  src: string
+  alt: string
+  fallback: React.ReactNode
+  badge: React.ReactNode

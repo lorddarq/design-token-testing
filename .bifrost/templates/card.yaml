@@ -1,0 +1,32 @@
+name: Card
+slots:
+  - header?
+  - description?
+  - media?
+  - children
+  - actions?
+structure: |
+  {header && <div className="card-header">{header}</div>}
+  {description && <div className="card-description">{description}</div>}
+  {media && <div className="card-media">{media}</div>}
+  <div className="card-content">{children}</div>
+  {actions && <div className="card-actions">{actions}</div>}
+props:
+  header: React.ReactNode
+  media: React.ReactNode
+  children: React.ReactNode
+  actions: React.ReactNode
+  layout: {
+    no-description: {
+      description: null
+    },
+    no-actions: {
+      actions: null
+    },
+    no-media: {
+      media: null
+    },
+    no-header: {
+      header: null
+    }
+  }

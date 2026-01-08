@@ -1,0 +1,20 @@
+name: alert-sticky
+slots:
+  - title
+  - description
+  - cta
+  - close
+structure: |
+  <div className="alert-wrapper">
+    <div className="alert-content">
+      {title && <div className="alert-title">{title}</div>}
+      {description && <div className="alert-description">{description}</div>}
+    </div>
+    {cta && <div className="alert-cta">{cta}</div>}
+    {close && <div className="alert-close">{close}</div>}
+  </div>
+props:
+  title: React.ReactNode
+  description: React.ReactNode
+  cta: React.ReactNode
+  close: React.ReactNode

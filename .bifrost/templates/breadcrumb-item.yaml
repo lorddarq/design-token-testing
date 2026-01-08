@@ -1,0 +1,15 @@
+name: breadcrumb-item
+slots:
+  - icon
+  - link
+  - separator
+structure: |
+  <div className="breadcrumb-item">
+    {icon && <span className="breadcrumb-icon">{icon}</span>}
+    {link && <span className="breadcrumb-link">{link}</span>}
+    {separator && <span className="breadcrumb-separator">{separator}</span>}
+  </div>
+props:
+  icon: React.ReactNode
+  link: React.ReactNode
+  separator: React.ReactNode

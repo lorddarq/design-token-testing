@@ -1,0 +1,20 @@
+name: Button
+slots:
+  - icon
+  - children
+  - loading
+structure: |
+  {loading ? (
+    <Spinner />
+  ) : (
+    <>
+      {iconPosition === "leading" && <span className="button-icon">{icon}</span>}
+      {children}
+      {iconPosition === "trailing" && <span className="button-icon">{icon}</span>}
+    </>
+  )}
+props:
+  icon: React.ReactNode
+  children: React.ReactNode
+  loading: boolean
+  iconPosition: ("leading" | "trailing")

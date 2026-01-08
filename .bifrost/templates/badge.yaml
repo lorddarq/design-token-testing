@@ -1,0 +1,14 @@
+name: Badge
+slots:
+  - icon
+  - children
+  - button
+structure: |
+  {hasButton && <span className="badge-button">{button}</span>}
+  {icon && <span className="badge-icon">{icon}</span>}
+  {children}
+props:
+  icon: React.ReactNode
+  children: React.ReactNode
+  button: React.ReactNode
+  hasButton: boolean
