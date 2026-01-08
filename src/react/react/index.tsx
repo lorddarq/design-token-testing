@@ -1,52 +1,47 @@
 import React, { FC } from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 
-const alertVariants = cva(
+const cookiesalertVariants = cva(
   'inline-flex items-center justify-center',
   {
     variants: {
     type: {
-      'info': '',
-      'error': '',
-      'success': '',
-      'warning': ''
+      'floating': '',
+      'full-width': '',
+      'mobile': ''
     }
     },
     defaultVariants: {
-      type: 'info'
+      type: 'full-width'
     },
   }
 );
 
 /**
- * Alert
- * Generated from Figma component: Alert
- * Component ID: 708:7829
+ * CookiesAlert
+ * Generated from Figma component: Cookies Alert
+ * Component ID: 708:7850
  */
-export interface AlertProps extends VariantProps<typeof alertVariants> {
+export interface CookiesAlertProps extends VariantProps<typeof cookiesalertVariants> {
   className?: string;
   children?: React.ReactNode;
-  2ndContent70812?: boolean;
-  cta70813?: boolean;
-  icon70814?: boolean;
-  title70827?: boolean;
+  title70832?: boolean;
+  2ndContent70836?: boolean;
 }
 
-const Alert: FC<AlertProps> = ({
+const CookiesAlert: FC<CookiesAlertProps> = ({
   className = '',
   children,
-  type = 'info',
-  2ndContent70812 = true,
-  cta70813 = true,
-  icon70814 = true,
-  title70827 = true,
+  type = 'full-width',
+  title70832 = true,
+  2ndContent70836 = true,
 }) => {
   return (
     <div
-      className={`${alertVariants({ type })} ${className}`}
+      className={`${cookiesalertVariants({ type })} ${className}`}
       style={{
-        width: 1296px,
-        height: 640px,
+        width: 1520px,
+        height: 966px,
       }}
     >
       {children}
@@ -54,4 +49,4 @@ const Alert: FC<AlertProps> = ({
   );
 };
 
-export default Alert;
+export default CookiesAlert;
